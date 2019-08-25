@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Stay On Linux</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/black.css" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css" />
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? "css/print/pdf.css"
+        : "css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <style>
+          .reveal h3 {
+            color: grey;
+            font-size: 0.9em;
+          }
+          #sponsor {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0.5em;
+          }
+          #sponsor img {
+            width: 172px;
+            margin-right: 0.5em;
+          }
+          #sponsor-block {
+            transform: scale(0.75);
+          }
+        </style>
+        <section style="padding-top: 5em">
+          <h2>Stay on Linux.</h2>
+          <h3>How and Why</h3>
+          <div id="sponsor-block">
+            Sponsored by
+            <div id="sponsor">
+              <img src="res/coding_blocks.png" alt="" />
+              <div>
+                CODING<br />
+                BLOCKS
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <section><h2>How?</h2></section>
+          <section>
+            <h2>
+              <span class="fragment" data-fragment-index="2">Awesome </span>
+              Alternatives!
+            </h2>
+          </section>
+          <section>
+            <h2>Even windows runtime</h2>
+            <h3 class="fragment">i.e. can run windows apps and games</h3>
+            <h3 class="fragment">
+              WINE
+            </h3>
+			<h3 class="fragment">spoiler was ahead!! <span class="fragment">sorry ^_^</span></h3>
+          </section>
+        </section>
+        <section><h2>Why?</h2></section>
+        <section><h2>Technical Superiority</h2></section>
+        <section>
+          <section>
+            <h2>package managers</h2>
+            <h3>Like app stores</h3>
+            <h3 class="fragment">but more kickass.</h3>
+          </section>
+          <section>
+            <h2>Why?</h2>
+          </section>
+          <section>
+            <h2>Easy</h2>
+
+            <div class="fragment">
+              <h3>apt</h3>
+              <pre><code class="hljs">$ sudo apt install python3</code></pre>
+            </div>
+
+            <div class="fragment">
+              <h3>pacman</h3>
+              <pre><code class="hljs">$ sudo pacman -S python</code></pre>
+            </div>
+
+            <div class="fragment">
+              <h3>yum</h3>
+              <pre><code class="hljs">$ sudo yum install python3</code></pre>
+            </div>
+          </section>
+          <section>
+            <h2>Efficient.</h2>
+          </section>
+          <section>
+            <h2>Smart dependency management</h2>
+            <h3 class="fragment">collects required packages.</h3>
+            <h3 class="fragment">removes unnecessary packages.</h3>
+            <h3 class="fragment">Automatically.</h3>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: "plugin/markdown/marked.js" },
+          { src: "plugin/markdown/markdown.js" },
+          { src: "plugin/notes/notes.js", async: true },
+          { src: "plugin/highlight/highlight.js", async: true }
+        ]
+      });
+    </script>
+  </body>
+</html>
