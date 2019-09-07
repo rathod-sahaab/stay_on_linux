@@ -1,141 +1,339 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
 
-    <title>Stay On Linux</title>
+        <title>Stay On Linux</title>
 
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/reveal.css" />
-    <link rel="stylesheet" href="css/theme/black.css" />
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/reveal.css" />
+        <link rel="stylesheet" href="css/theme/black.css" />
 
-    <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="lib/css/monokai.css" />
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/monokai.css" />
 
-    <!-- Printing and PDF exports -->
-    <script>
-      var link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.type = "text/css";
-      link.href = window.location.search.match(/print-pdf/gi)
-        ? "css/print/pdf.css"
-        : "css/print/paper.css";
-      document.getElementsByTagName("head")[0].appendChild(link);
-    </script>
-  </head>
-  <body>
-    <div class="reveal">
-      <div class="slides">
-        <style>
-          .reveal h3 {
-            color: grey;
-            font-size: 0.9em;
-          }
-          #sponsor {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 0.5em;
-          }
-          #sponsor img {
-            width: 172px;
-            margin-right: 0.5em;
-          }
-          #sponsor-block {
-            transform: scale(0.75);
-          }
-        </style>
-        <section style="padding-top: 5em">
-          <h2>Stay on Linux.</h2>
-          <h3>How and Why</h3>
-          <div id="sponsor-block">
-            Sponsored by
-            <div id="sponsor">
-              <img src="res/coding_blocks.png" alt="" />
-              <div>
-                CODING<br />
-                BLOCKS
-              </div>
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match(/print-pdf/gi)
+                ? 'css/print/pdf.css'
+                : 'css/print/paper.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        </script>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <style>
+                    .reveal h3 {
+                        color: grey;
+                        font-size: 0.9em;
+                    }
+                    #sponsor {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-top: 0.5em;
+                    }
+                    #sponsor img {
+                        width: 172px;
+                        margin-right: 0.5em;
+                    }
+                    #sponsor-block {
+                        transform: scale(0.75);
+                    }
+                    pre code.hljs {
+                        font-family: 'PT Mono', 'Fira Code', monospace;
+                    }
+                </style>
+                <section style="padding-top: 5em">
+                    <h2>Stay on Linux.</h2>
+                    <h3>How and Why</h3>
+                    <div id="sponsor-block">
+                        Sponsored by
+                        <div id="sponsor">
+                            <img src="res/coding_blocks.png" alt="" />
+                            <div>
+                                CODING<br />
+                                BLOCKS
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <section><h2>How?</h2></section>
+                    <section>
+                        <h2>
+                            <span class="fragment" data-fragment-index="2"
+                                >Awesome
+                            </span>
+                            Alternatives!
+                        </h2>
+                    </section>
+                    <section>
+                        <h2>Even windows runtime</h2>
+                        <h3 class="fragment">
+                            i.e. can run windows apps and games
+                        </h3>
+                        <h3 class="fragment">
+                            WINE
+                        </h3>
+                        <h3 class="fragment">spoiler was ahead!!</h3>
+                    </section>
+                </section>
+                <section><h2>Why?</h2></section>
+                <section><h2>Technical Superiority</h2></section>
+                <section>
+                    <section>
+                        <h2>package managers</h2>
+                        <h3>Like app stores</h3>
+                        <h3 class="fragment">but more kickass.</h3>
+                    </section>
+                    <section>
+                        <h2>
+                            But first...
+                            <span class="fragment"> What is a package?</span>
+                        </h2>
+                        <h3 class="fragment">An app's package contains</h3>
+                        <h3 class="fragment">It's executable</h3>
+                        <h3 class="fragment">It's resources (icons, themes)</h3>
+                        <h3 class="fragment">
+                            It's default configurations and it's info.
+                        </h3>
+                    </section>
+                    <section>
+                        <h2>Why package managers are better?</h2>
+                    </section>
+                    <section>
+                        <h2>Easy</h2>
+
+                        <div class="fragment">
+                            <h3>apt</h3>
+                            <pre><code class="hljs">$ sudo apt install git</code></pre>
+                        </div>
+
+                        <div class="fragment">
+                            <h3>pacman</h3>
+                            <pre><code class="hljs">$ sudo pacman -S git</code></pre>
+                        </div>
+
+                        <div class="fragment">
+                            <h3>yum</h3>
+                            <pre><code class="hljs">$ sudo yum install git</code></pre>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Efficient.</h2>
+                    </section>
+                    <section>
+                        <h2>Smart dependency management</h2>
+                        <h3 class="fragment">collects required packages.</h3>
+                        <h3 class="fragment">removes unnecessary packages.</h3>
+                        <h3 class="fragment">Automatically.</h3>
+                    </section>
+                    <section>
+                        <h2>Minimum Effort.</h2>
+                    </section>
+                    <section>
+                        <h2>Typical windows/macOS instalation.</h2>
+                        <h3 class="fragment">Go to app's site</h3>
+                        <h3 class="fragment">
+                            Download Installer > Run Installer
+                        </h3>
+                        <h3 class="fragment">
+                            Do you really want to? this app is from
+                            <strike>open</strike> untrusted source > Run Anyway
+                        </h3>
+                        <h3 class="fragment">
+                            Next> Next> Next> Install(Check some boxes in
+                            between)
+                        </h3>
+                        <h3 class="fragment">
+                            Error: This app requires these dependencies as well
+                        </h3>
+                        <h3 class="fragment">Repeat!</h3>
+                    </section>
+                    <section>
+                        <h2>Typical Linux instalation</h2>
+                        <pre><code class="hljs bash">$ sudo apt install git
+Password:
+...
+...
+Need to download 21kB of archives,
+2.1MB of space will be occupied.
+Do you wish to proceed? [y/n]:y</code></pre>
+                        <h3 class="fragment">and everything works!</h3>
+                        <h3 class="fragment">Why the exclamation mark?</h3>
+                        <h3 class="fragment">
+                            Isn't it supposed to be that easy?
+                        </h3>
+                    </section>
+                    <section>
+                        <h2>Easy Updates</h2>
+                        <h3 class="fragment">
+                            Windows: open every app find update option download
+                            and install basically the same as 2 slides back
+                        </h3>
+                        <h3 class="fragment">Linux: One Liner!</h3>
+                        <pre
+                            class="fragment"
+                        ><code class="hljs bash">$ sudo apt update && sudo apt upgrade
+Password:
+...
+...
+Need to download 21kB of archives,
+2.1MB of space will be occupied.
+Do you wish to proceed? [y/n]:y</code></pre>
+                    </section>
+                    <section>
+                        <h2>Easy replication</h2>
+                        <h3 class="fragment">Backup/Recovery</h3>
+                        <h3 class="fragment">
+                            System Cloning (necessity in offices)
+                        </h3>
+                        <div class="fragment">
+                            <h3>clone</h3>
+                            <pre
+                                class="fragment"
+                            ><code class="hljs bash">$ sudo apt install apt-clone
+$ sudo apt-clone clone desired_folder</code></pre>
+                        </div>
+                        <div class="fragment">
+                            <h3>restore</h3>
+                            <pre
+                                class="fragment"
+                            ><code class="hljs bash">$ sudo apt install apt-clone
+$ sudo apt-clone restore path/to/backup_file</code></pre>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>On a side note</h2>
+                        <h3 class="fragment">
+                            Every setting and every user file is stored in
+                            <pre><code class="hljs bash">/home</code></pre>
+                            folder
+                        </h3>
+                        <h3 class="fragment">
+                            Just copy home folder in new installation and all
+                            settings are same as old system.
+                        </h3>
+                    </section>
+                    <section>
+                        <h2>That was first point</h2>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Support</h2>
+                        <h3 class="fragment">Wide informed Community</h3>
+                        <h3 class="fragment">
+                            Quantum Documentation (Every feature/bug is
+                            documented)
+                        </h3>
+                        <h3 class="fragment">
+                            Companies providing support services for industry
+                            (RedHat, SUSE, canonical etc.)
+                        </h3>
+                    </section>
+                    <section>
+                        <h2>Help!</h2>
+                        <h3 class="fragment">Offline help is also available</h3>
+                        <h3 class="fragment">Manpages!</h3>
+                        <pre
+                            class="fragment"
+                        ><code class="hljs bash">$ man program_name</code></pre>
+                        <h3 class="fragment">Usage help</h3>
+                        <pre
+                            class="fragment"
+                        ><code class="hljs bash">$ program_name -h</code></pre>
+                        <pre
+                            class="fragment"
+                        ><code class="hljs bash">$ program_name --help</code></pre>
+                    </section>
+                    <section>
+                        <h2>
+                            I never found a problem that wasn't already solved
+                        </h2>
+                        <h3 class="fragment">
+                            Just copy paste errors followed by OS name
+                        </h3>
+                        <h3 class="fragment">
+                            In terminal use [Ctrl + Shift + C] to copy
+                        </h3>
+                        <h3 class="fragment">
+                            In terminal use [Ctrl + Shift + V] to paste
+                        </h3>
+                        <h3 class="fragment">
+                            outside terminal normal shortcuts [Ctrl + C] and
+                            [Ctrl + V]
+                        </h3>
+                    </section>
+                </section>
+
+                <section>
+                    <h2>Portability</h2>
+                    <h3 class="fragment">Runs everywhere!!</h3>
+                    <div
+                        style="display: flex; align-items: center; justify-content: space-evenly"
+                    >
+                        <div class="fragment">
+                            <img
+                                style="max-width: 100px; max-height: 100px;"
+                                src="res/server.svg"
+                                alt=""
+                            />
+                            <h3>Servers</h3>
+                        </div>
+                        <div class="fragment">
+                            <img
+                                style="max-width: 100px; max-height: 100px;"
+                                src="res/laptop.svg"
+                                alt=""
+                            />
+                            <h3>Computers</h3>
+                        </div>
+                        <div class="fragment">
+                            <img
+                                style="max-width: 100px; max-height: 100px;"
+                                src="res/smartphones.svg"
+                                alt=""
+                            />
+                            <h3>Phones</h3>
+                        </div>
+                        <div class="fragment">
+                            <img
+                                style="max-width: 100px; max-height: 100px;"
+                                src="res/motherboard.svg"
+                                alt=""
+                            />
+                            <h3>Embeded</h3>
+                        </div>
+                    </div>
+                </section>
             </div>
-          </div>
-        </section>
-        <section>
-          <section><h2>How?</h2></section>
-          <section>
-            <h2>
-              <span class="fragment" data-fragment-index="2">Awesome </span>
-              Alternatives!
-            </h2>
-          </section>
-          <section>
-            <h2>Even windows runtime</h2>
-            <h3 class="fragment">i.e. can run windows apps and games</h3>
-            <h3 class="fragment">
-              WINE
-            </h3>
-			<h3 class="fragment">spoiler was ahead!! <span class="fragment">sorry ^_^</span></h3>
-          </section>
-        </section>
-        <section><h2>Why?</h2></section>
-        <section><h2>Technical Superiority</h2></section>
-        <section>
-          <section>
-            <h2>package managers</h2>
-            <h3>Like app stores</h3>
-            <h3 class="fragment">but more kickass.</h3>
-          </section>
-          <section>
-            <h2>Why?</h2>
-          </section>
-          <section>
-            <h2>Easy</h2>
+        </div>
 
-            <div class="fragment">
-              <h3>apt</h3>
-              <pre><code class="hljs">$ sudo apt install python3</code></pre>
-            </div>
+        <script src="js/reveal.js"></script>
 
-            <div class="fragment">
-              <h3>pacman</h3>
-              <pre><code class="hljs">$ sudo pacman -S python</code></pre>
-            </div>
-
-            <div class="fragment">
-              <h3>yum</h3>
-              <pre><code class="hljs">$ sudo yum install python3</code></pre>
-            </div>
-          </section>
-          <section>
-            <h2>Efficient.</h2>
-          </section>
-          <section>
-            <h2>Smart dependency management</h2>
-            <h3 class="fragment">collects required packages.</h3>
-            <h3 class="fragment">removes unnecessary packages.</h3>
-            <h3 class="fragment">Automatically.</h3>
-          </section>
-        </section>
-      </div>
-    </div>
-
-    <script src="js/reveal.js"></script>
-
-    <script>
-      // More info about config & dependencies:
-      // - https://github.com/hakimel/reveal.js#configuration
-      // - https://github.com/hakimel/reveal.js#dependencies
-      Reveal.initialize({
-        dependencies: [
-          { src: "plugin/markdown/marked.js" },
-          { src: "plugin/markdown/markdown.js" },
-          { src: "plugin/notes/notes.js", async: true },
-          { src: "plugin/highlight/highlight.js", async: true }
-        ]
-      });
-    </script>
-  </body>
+        <script>
+            // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+            // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
+                dependencies: [
+                    { src: 'plugin/markdown/marked.js' },
+                    { src: 'plugin/markdown/markdown.js' },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/highlight/highlight.js', async: true },
+                ],
+            });
+        </script>
+    </body>
 </html>
